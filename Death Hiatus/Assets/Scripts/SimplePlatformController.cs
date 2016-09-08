@@ -9,6 +9,7 @@ public class SimplePlatformController : MonoBehaviour {
 	public float maxSpeed = 5f;
 	public float jumpForce = 1000f;
 	public Transform groundCheck;
+	public Transform birdHero;
 
 
 	private bool grounded = false;
@@ -66,5 +67,16 @@ public class SimplePlatformController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	void OnCollisionEnter2D (Collision2D col)
+	{
+		if(col.gameObject.tag == "FlyingEnemy")
+		{
+			//Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col.gameObject.GetComponent<Collider2D>());
+			Vector2 playerPos = gameObject.transform.position;
+			Destroy(gameObject);
+			Instantiate(birdHero, playerPos, Quaternion.identity);
+		}
 	}
 }
