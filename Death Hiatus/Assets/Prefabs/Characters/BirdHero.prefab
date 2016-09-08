@@ -22,6 +22,7 @@ GameObject:
   - 114: {fileID: 114000010711825504}
   - 50: {fileID: 50000013020992422}
   - 61: {fileID: 61000012189135960}
+  - 114: {fileID: 114000011999896466}
   m_Layer: 0
   m_Name: BirdHero
   m_TagString: Player
@@ -231,6 +232,19 @@ MonoBehaviour:
   jumpForce: 1000
   HumanHero: {fileID: 0}
   groundCheck: {fileID: 4000011428658736}
+--- !u!114 &114000011999896466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011113334168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7bf6b32050a2046aa60124ec94a1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inanimateElement: {fileID: 4000010173174724, guid: e1346d2e93f13904d96bf7548de240ef,
+    type: 2}
 --- !u!124 &124000012109831990
 Behaviour:
   m_ObjectHideFlags: 1
